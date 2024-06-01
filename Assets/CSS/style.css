@@ -1,61 +1,145 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 /* Global variable */
 :root{
     --dark-primary:#1b1f24; 
     --primary :#12bdff;
+    --primary-hover:#0c8ec2;
+    --nunito: "Nunito Sans", sans-serif;
 }
-*{
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: "Nunito Sans", sans-serif;
+
+/* Set font family */
+body {
+    font-family: var(--nunito);
 }
 
-/* header */
-header{
-    background-color:#1b1f24;
+/* Header styling */
+header {
+    background-color: var(--dark-primary);
     padding: 20px;
     color: white;
-    display: flex;
+    display: flex; 
     justify-content: space-around;
     align-items: center;
 }
-/* logo */
-.logo{
+
+/* Logo styling */
+header .logo {
     color: var(--primary);
     font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: 2px;   
 }
-ul{
+
+/* Navigation menu styling */
+ul {
     display: flex;
     list-style: none;
 }
-ul li{
-    margin-right: 22px;
-}
-ul li a{
-    color: #fff;
-    text-decoration: none;  
+
+header ul li {
+    margin-right: 20px;
 }
 
-ul li a:hover{
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+     font-weight:600 ;
+}
+
+header ul li a:hover {
     color: var(--primary);
 }
-/* header > button */
-header button{
-    padding-left: 10px 20px;
-    font-weight: 600 bold;
+
+/* Button styling */
+
+
+/* Section */
+section.portfolio-section{
+    background-color: var(--dark-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 20px 120px 0 240px;
+}
+.portfolio-title{
+    font-size: 48px;
+    font-weight: 900;
+}
+.portfolio-title > span{
+    color: var(--primary);
+}
+.portfolio-description{
+color: #c4c4c4;
+}
+/* icons */
+.icons{
+    margin-top: 20px 0;
+}
+.icons li{
+    margin-right: 15px;
+}
+.icons ul{
+    list-style: none;
+    display: flex;
+}
+.icons li > a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons li > a:hover{
+color: var(--primary);
+}
+.icons li a > i.fa-facebook:hover{
+    color:#1877F2;
+}
+.icons li a > i.fa-linkedin:hover{
+    color: #0077b5;
+}
+.icons li a > i.fa-instagram:hover{
+    color:#FCAF45;
+}
+/* buttons */
+.portfolio-buttons{
+    margin-right: 10px;
+}
+ .btn{
+    padding: 10px 20px;
+    border-radius: 2px;
+    border:none;
+    cursor: pointer;
+    display: flex;
+}
+.btn.btn-primary {
+    background-color: var(--primary);
+    font-weight: 600;
+    color:var(--dark-primary);
+ }
+.btn.btn-primary:hover{
+    background-color: var(--primary-hover); 
+} 
+.btn-dark-outlined{
     background-color: var(--dark-primary);
     border: 1px solid var(--primary);
     border-radius: 5px;
     color: var(--primary);
+    font-weight: 600;
+ 
 }
-header button:hover{
+.portfolio-buttons{
+    display: inline-flex;
+margin-top: 10px;
+}
+/* header buttons */
+header button {
+    padding: 10px 20px;
+   }
+.btn-dark-outlined:hover {
     cursor: pointer;
     background-color: var(--primary);
-    color: var(--dark-primary);
-    color: white;
+    color: #fff;
 }
